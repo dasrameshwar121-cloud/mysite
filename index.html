@@ -1,427 +1,124 @@
+<!-- BEGINNING OF FILE: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.K Creation - Professional Photography Studio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .booking-gradient {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .gallery-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .modal {
-            transition: opacity 0.3s ease;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R.K Creation - Professional Photography Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .booking-gradient {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    .gallery-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .modal {
+      transition: opacity 0.3s ease;
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <h1 class="playfair text-2xl font-bold text-purple-700">R.K Creation</h1>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-purple-600 transition-colors">Home</a>
-                    <a href="#services" class="hover:text-purple-600 transition-colors">Services</a>
-                    <a href="#gallery" class="hover:text-purple-600 transition-colors">Gallery</a>
-                    <a href="#about" class="hover:text-purple-600 transition-colors">About</a>
-                    <a href="#contact" class="hover:text-purple-600 transition-colors">Contact</a>
-                </div>
-                <button onclick="openBookingModal()" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
-                    Book Now
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-20 hero-gradient text-white min-h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="playfair text-5xl md:text-6xl font-bold mb-6">Capture Your Perfect Moments</h1>
-                    <p class="text-xl mb-8 opacity-90">Professional photography studio specializing in portraits, events, and creative shoots. Let us bring your vision to life.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <button onclick="openBookingModal()" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                            Book Your Session
-                        </button>
-                        <a href="#gallery" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                            View Portfolio
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6da56e07-3e08-498c-b7d7-51078e6b7587.png" alt="Professional photography studio interior with modern lighting equipment and backdrop setups" class="rounded-2xl shadow-2xl" />
-                    <div class="absolute -inset-4 bg-purple-400 rounded-2xl -z-10 opacity-30"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- [Your existing navigation, hero, services, gallery, about, contact, and footer code goes here — as in your original file. I'm skipping it here to focus on the updated Booking Modal part.] -->
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="playfair text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
-                <p class="text-xl text-gray-600">Comprehensive photography services for every occasion</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-camera text-3xl text-purple-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Portrait Photography</h3>
-                    <p class="text-gray-600 mb-4">Professional individual and family portraits with expert lighting and composition.</p>
-                    <span class="text-2xl font-bold text-purple-600">From ₹5000</span>
-                </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-ring text-3xl text-pink-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Wedding Photography</h3>
-                    <p class="text-gray-600 mb-4">Capture your special day with beautiful, timeless wedding photography.</p>
-                    <span class="text-2xl font-bold text-pink-600">From ₹15,000-20,000</span>
-                </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-baby text-3xl text-blue-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Newborn & Maternity</h3>
-                    <p class="text-gray-600 mb-4">Gentle, beautiful photoshoots for expecting mothers and newborns.</p>
-                    <span class="text-2xl font-bold text-blue-600">From ₹8000</span>
-                </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-building text-3xl text-green-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Commercial Photography</h3>
-                    <p class="text-gray-600 mb-4">Professional product and business photography for brands and companies.</p>
-                    <span class="text-2xl font-bold text-green-600">From ₹10000</span>
-                </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-graduation-cap text-3xl text-orange-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Event Photography</h3>
-                    <p class="text-gray-600 mb-4">Corporate events, birthdays, and special occasions captured professionally.</p>
-                    <span class="text-2xl font-bold text-orange-600">From ₹10000</span>
-                </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-magic text-3xl text-red-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Creative & Concept Shoots</h3>
-                    <p class="text-gray-600 mb-4">Unique, artistic photography sessions for creative projects and portfolios.</p>
-                    <span class="text-2xl font-bold text-red-600">From ₹7000</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Booking Modal -->
+<div id="bookingModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 modal opacity-0 pointer-events-none transition-opacity">
+  <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative">
+    <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+      <i class="fas fa-times text-2xl"></i>
+    </button>
+    <h2 class="playfair text-3xl font-bold text-center mb-6">Book Your Session</h2>
+    
+    <!-- ✅ Updated Formspree Form -->
+    <form action="https://formspree.io/f/mjkedbqg" method="POST" class="space-y-4" id="bookingForm">
+      <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <select name="service" required class="w-full p-3 border border-gray-300 rounded-lg">
+        <option value="">Select Service Type</option>
+        <option value="Portrait Photography">Portrait Photography</option>
+        <option value="Wedding Photography">Wedding Photography</option>
+        <option value="Newborn & Maternity">Newborn & Maternity</option>
+        <option value="Commercial Photography">Commercial Photography</option>
+        <option value="Event Photography">Event Photography</option>
+        <option value="Creative Shoots">Creative Shoots</option>
+      </select>
+      <input type="date" name="date" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <input type="time" name="time" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <textarea name="message" placeholder="Special Requests or Notes" rows="3" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="playfair text-4xl font-bold text-gray-800 mb-4">Our Gallery</h2>
-                <p class="text-xl text-gray-600">A glimpse of our creative work and photography style</p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/80021cf1-7dfd-4b57-8778-817aa1536bc0.png" alt="Elegant wedding couple portrait in golden hour lighting with soft focus" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4b80f1a7-911e-48b9-8c94-93599fc3b0fc.png" alt="Creative portrait photography with dramatic lighting and urban background" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/66aad4b3-0504-4508-8db4-49aeb1773707.png" alt="Newborn baby photography session with soft blankets and natural lighting" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/22fbfde8-a9dc-47a5-8e57-a9b6388b4234.png" alt="Corporate headshot photography with professional studio lighting setup" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8b2cd7ef-3d4e-4b8b-bdfa-27864baf8837.png" alt="Fashion photography with model in designer clothing against industrial background" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9ab18104-628d-476c-ba25-1d96b20c38df.png" alt="Family portrait session in outdoor park setting with natural smiles" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/225050a7-2ff3-4c1d-984b-1352394abf9d.png" alt="Product photography for jewelry with clean white background and perfect lighting" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4ef85f5f-9f1b-48c8-91ca-294b9498147c.png" alt="Event photography capturing candid moments at corporate conference" class="w-full h-64 object-cover rounded-lg" />
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Optional: auto-response message -->
+      <input type="hidden" name="_autoresponse" value="Thanks for booking with R.K Creation! We'll get in touch with you soon.">
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6591d2d6-c325-4e5c-9769-64aebc3200e5.png" alt="Professional photographer at work in modern studio with high-end camera equipment" class="rounded-2xl shadow-2xl" />
-                </div>
-                <div>
-                    <h2 class="playfair text-4xl font-bold mb-6">About R.K Creation</h2>
-                    <p class="text-lg mb-6 opacity-90">
-                        Founded with a passion for capturing life's most precious moments, R.K Creation has been delivering exceptional photography services for over 3 years. Our studio combines technical expertise with artistic vision to create images that tell your unique story.
-                    </p>
-                    <p class="text-lg mb-8 opacity-90">
-                        We believe that every photoshoot is a collaboration between photographer and client. Our team of experienced professionals is dedicated to making your experience comfortable, enjoyable, and ultimately, producing photographs you'll treasure forever.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div>
-                            <div class="text-3xl font-bold text-purple-400">50+</div>
-                            <div class="text-gray-400">Happy Clients</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-purple-400">3+</div>
-                            <div class="text-gray-400">Years Experience</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-purple-400">60+</div>
-                            <div class="text-gray-400">Photosessions</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+        Confirm Booking
+      </button>
+    </form>
+  </div>
+</div>
 
-    <!-- Contact & Booking Section -->
-    <section id="contact" class="py-20 booking-gradient text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="playfair text-4xl font-bold mb-4">Ready to Create Magic?</h2>
-                <p class="text-xl opacity-90">Book your session today and let's create beautiful memories together</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6">Studio Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-2xl mr-4"></i>
-                            <div>
-                                <div class="font-semibold">Studio Address</div>
-                                <div class="opacity-90">At+po :- kumardubi , Dist:- east singhbhum,jharkhand,832101</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-2xl mr-4"></i>
-                            <div>
-                                <div class="font-semibold">Phone Number</div>
-                                <div class="opacity-90">+91 62016 99825</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-2xl mr-4"></i>
-                            <div>
-                                <div class="font-semibold">Email</div>
-                                <div class="opacity-90">rd075043.com</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock text-2xl mr-4"></i>
-                            <div>
-                                <div class="font-semibold">Working Hours</div>
-                                <div class="opacity-90">Mon-Sat: 9AM - 8PM, Sun: 10AM - 6PM</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
-                    <h3 class="text-2xl font-semibold mb-6">Quick Inquiry</h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70">
-                        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70">
-                        <input type="tel" placeholder="Your Phone" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70">
-                        <select class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white">
-                            <option value="">Select Service</option>
-                            <option value="portrait">Portrait Photography</option>
-                            <option value="wedding">Wedding Photography</option>
-                            <option value="newborn">Newborn & Maternity</option>
-                            <option value="commercial">Commercial Photography</option>
-                            <option value="event">Event Photography</option>
-                            <option value="creative">Creative Shoots</option>
-                        </select>
-                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70"></textarea>
-                        <button type="submit" class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                            Send Inquiry
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Scripts -->
+<script>
+  // Modal open/close
+  function openBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    document.body.style.overflow = 'hidden';
+  }
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="playfair text-2xl font-bold mb-4">R.K Creation</h3>
-                    <p class="text-gray-400">Creating timeless memories through the art of photography.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Portrait Photography</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Wedding Photography</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Newborn Photography</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Commercial Photography</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Connect With Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© 2024 R.K Creation. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  function closeBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    document.body.style.overflow = 'auto';
+  }
 
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 modal opacity-0 pointer-events-none transition-opacity">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative">
-            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h2 class="playfair text-3xl font-bold text-center mb-6">Book Your Session</h2>
-            <form class="space-y-4" id="bookingForm">
-                <input type="text" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg">
-                <input type="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg">
-                <input type="tel" placeholder="Phone Number" required class="w-full p-3 border border-gray-300 rounded-lg">
-                <select required class="w-full p-3 border border-gray-300 rounded-lg">
-                    <option value="">Select Service Type</option>
-                    <option value="portrait">Portrait Photography</option>
-                    <option value="wedding">Wedding Photography</option>
-                    <option value="newborn">Newborn & Maternity</option>
-                    <option value="commercial">Commercial Photography</option>
-                    <option value="event">Event Photography</option>
-                    <option value="creative">Creative Shoots</option>
-                </select>
-                <input type="date" required class="w-full p-3 border border-gray-300 rounded-lg">
-                <input type="time" required class="w-full p-3 border border-gray-300 rounded-lg">
-                <textarea placeholder="Special Requests or Notes" rows="3" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
-                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                    Confirm Booking
-                </button>
-            </form>
-        </div>
-    </div>
+  // Close modal on outside click
+  document.getElementById('bookingModal').addEventListener('click', function(e) {
+    if (e.target === this) closeBookingModal();
+  });
 
-    <script>
-        // Modal functionality
-        function openBookingModal() {
-            document.getElementById('bookingModal').classList.remove('opacity-0', 'pointer-events-none');
-            document.getElementById('bookingModal').classList.add('opacity-100');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeBookingModal() {
-            document.getElementById('bookingModal').classList.add('opacity-0', 'pointer-events-none');
-            document.getElementById('bookingModal').classList.remove('opacity-100');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('bookingModal').addEventListener('click', function(e) {
-            if (e.target === this) closeBookingModal();
+  // Smooth scroll for navbar links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
+      }
+    });
+  });
 
-        // Form submission
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
-            closeBookingModal();
-            this.reset();
-        });
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Sticky navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
-    </script>
+  // Sticky navigation
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) {
+      nav.classList.add('shadow-lg');
+    } else {
+      nav.classList.remove('shadow-lg');
+    }
+  });
+</script>
 </body>
 </html>
- 
